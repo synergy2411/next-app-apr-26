@@ -1,24 +1,19 @@
-import Link from "next/link";
+import NavLink from "./nav-link";
 
 function MainNavigation() {
+  const allLinks = [
+    { path: "/", content: "Home" },
+    { path: "/courses", content: "Browser Courses" },
+    { path: "/courses/share", content: "Share Your Course" },
+  ];
   return (
     <header>
       <ul className="nav nav-tabs">
-        <li className="nav-item">
-          <Link className="nav-link" href="/">
-            Home
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" href="/courses">
-            Browse Courses
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" href="/courses/share">
-            Share your course
-          </Link>
-        </li>
+        {allLinks.map((link) => (
+          <li key={link.path} className="nav-item">
+            <NavLink href={link.path}>{link.content}</NavLink>
+          </li>
+        ))}
       </ul>
     </header>
   );
