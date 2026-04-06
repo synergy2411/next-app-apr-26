@@ -5,7 +5,7 @@ import CourseGrid from "@/components/courses-grid";
 function CoursesPage() {
   return (
     <>
-      <h1>Courses coming soon...</h1>
+      <h1 className="text-center mb-5">Browse All Courses</h1>
       <CourseGrid />
     </>
   );
