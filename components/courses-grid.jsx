@@ -8,7 +8,7 @@ async function CourseGrid() {
       {courses.map((course) => (
         <div key={course.id} className="col-4">
           <Link href={`/courses/${course.slug}`}>
-            <div className="card">
+            <div className="card mb-3">
               <div className="card-header">
                 <h5 className="text-center">{course.title.toUpperCase()}</h5>
               </div>
