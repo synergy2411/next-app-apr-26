@@ -1,0 +1,14 @@
+"use client";
+
+import { useFormStatus } from "react-dom";
+
+function FormSubmitButton() {
+  const { pending } = useFormStatus();
+  return (
+    <button type="submit" className="btn btn-primary" disabled={pending}>
+      {pending ? "Saving..." : "Save"}
+    </button>
+  );
+}
+
+export default FormSubmitButton;

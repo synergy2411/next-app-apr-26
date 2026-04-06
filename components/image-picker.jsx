@@ -12,11 +12,8 @@ function ImagePicker() {
   };
 
   const imageChangeHandler = (e) => {
-    console.log(e.target);
     const file = e.target.files[0];
-
     const fileReader = new FileReader();
-
     fileReader.onload = function () {
       setPickedImage(fileReader.result);
     };
@@ -24,16 +21,16 @@ function ImagePicker() {
   };
   return (
     <>
-      <div style={{ width: "100px", height: "100px", position: "relative" }}>
-        {pickedImage && (
+      {pickedImage && (
+        <div style={{ width: "100px", height: "100px", position: "relative" }}>
           <Image
             src={pickedImage}
             style={{ position: "absolute" }}
             alt="Image selected by user"
             fill
           />
-        )}
-      </div>
+        </div>
+      )}
       {!pickedImage && <p>Please select image to upload.</p>}
       <input
         type="file"

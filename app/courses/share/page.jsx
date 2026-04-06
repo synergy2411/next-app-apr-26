@@ -1,5 +1,6 @@
 // http://localhost:3000/courses/share
 
+import FormSubmitButton from "@/components/form-button";
 import ImagePicker from "@/components/image-picker";
 import { shareCourseAction } from "@/lib/action";
 
@@ -62,9 +63,7 @@ function ShareCourse() {
           <div className="row">
             <div className="col">
               <div className="d-grid">
-                <button type="submit" className="btn btn-primary">
-                  Save
-                </button>
+                <FormSubmitButton />
               </div>
             </div>
             <div className="col">
